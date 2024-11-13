@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from "react";
-import { Routes, Route, Link, useNavigate, useParams } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 
 import teaTrade from './assets/teaTrade.png';
 import Overview from './Overview/Overview';
@@ -9,10 +9,11 @@ import Subscription from './Subscription/Subscription';
 function App() {
   const navigate = useNavigate();
   let [subData, setSubData] = useState();
+  let location = useLocation();
 
   useEffect(() => {
     fetchAllSubs();
-  }, []);
+  }, [location]);
 
   function fetchAllSubs() {
     fetch("http://127.0.0.1:3000/api/v1/subscriptions")
