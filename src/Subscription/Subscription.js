@@ -57,6 +57,7 @@ function Subscription() {
       <section className='tea-info'>
         <h2>{specificSubscription.attributes.tea.attributes.title}</h2>
         <img src={specificSubscription.attributes.tea.attributes.image} alt='Image of Tea'/>
+        <p>${specificSubscription.attributes.tea.attributes.price}</p>
         <p>{specificSubscription.attributes.tea.attributes.description}</p>
         <p>Temperature: {specificSubscription.attributes.tea.attributes.temp} F</p>
         <p>Brew time: {specificSubscription.attributes.tea.attributes.brew_time} Minutes</p>

@@ -18,11 +18,13 @@ function Overview({ subData }) {
 
   return (
     <main className='overview-main'>
-      <form className='search-bar'>
-        <label for='search'>Search:</label>
-        <input type='text' id='search' value={searchQuery} onChange={updateSearchQuery}/>
-      </form>
-      <h2 className='overview-header'>Overview</h2>
+      <header className='overview-header'>
+        <h2 className='overview-title'>Overview</h2>
+        <form className='search-bar'>
+          <label for='search'>Search:</label>
+          <input type='text' id='search' value={searchQuery} onChange={updateSearchQuery}/>
+        </form>
+      </header>
       {filteredData && filteredData.length > 0 ? (
         <SubscriptionContainer subData={{ data: filteredData }} />
       ) : (

@@ -1,0 +1,32 @@
+
+
+.overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-title {
+  background-color: white;
+  color: rgb(114, 117, 112);
+  font-size: 2vw;
+  margin: 2vw 4vw; 
+}
+
+.search-bar {
+  background-color:rgb(184, 189, 181);
+  padding: 2vw;
+  border-radius: 5vw;
+}
+
+.search-bar label {
+  background-color:rgb(184, 189, 181);
+  margin-right: 8px;
+  font-size: 1.75vw;
+}
+
+input[type='text'] {
+  padding: 5px;
+  width: 200px;
+  background-color: white;
+}
