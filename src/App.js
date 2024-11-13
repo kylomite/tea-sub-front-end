@@ -12,7 +12,7 @@ function App() {
     <section>
       <header>
         <img className='logo' src={teaTrade} alt='Tea Trade Logo' onClick={() => {navigate(`/`)}}/>
-        <p>this is my react app!</p>
+        <h1>T-Trade</h1>
       </header>
       <Routes>
         <Route />
