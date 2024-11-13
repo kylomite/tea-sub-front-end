@@ -9,7 +9,7 @@ header {
   border-radius: 6vw;
   margin: 1vw 1vw;
 }
-img {
+.logo {
   width: 10vw;
   height: 10vw;
   border-radius: 5vw;
@@ -17,8 +17,8 @@ img {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
-img:hover {
-  transform: scale(1.1);
+.logo:hover {
+  transform: scale(1.15);
 }
 
 h1 {
@@ -26,6 +26,6 @@ h1 {
   font-size: 4vw;
   margin: 4vw 0vw 0vw 0vw;
   color: rgb(184, 189, 181);
-  text-shadow: -2px 2px 0px rgb(114, 117, 112);
+  text-shadow: -2.5px 2.5px 0px rgb(114, 117, 112);
 
 }

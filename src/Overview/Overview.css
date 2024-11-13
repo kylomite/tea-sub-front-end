@@ -15,17 +15,24 @@
 
 .search-bar {
   background-color:rgb(184, 189, 181);
-  padding: 2vw;
+  padding: 2.5vw;
   border-radius: 5vw;
+  transition: box-shadow 0.2s ease-out;
+}
+
+.search-bar:hover {
+  box-shadow: -20px 0 0px rgba(114, 117, 112, 1);
 }
 
 .search-bar label {
   background-color:rgb(184, 189, 181);
+  color: rgb(114, 117, 112);
   margin-right: 8px;
-  font-size: 1.75vw;
+  font-size: 1.8vw;
 }
 
 input[type='text'] {
+  border-style: none;
   padding: 5px;
   width: 200px;
   background-color: white;
