@@ -80,6 +80,7 @@ function Subscription() {
             Customer: {specificSubscription.attributes.customer.attributes.first_name}{" "}   
             {specificSubscription.attributes.customer.attributes.last_name} 
           </h2>
+          <p className='order-frequency'>Recurring: {specificSubscription.attributes.frequency} months of the year</p>
           <p className='email-sub'>Email: {specificSubscription.attributes.customer.attributes.email}</p>
           <p className='address-sub'>
             Address: 
