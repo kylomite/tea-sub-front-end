@@ -19,6 +19,9 @@ function App() {
     fetch("http://127.0.0.1:3000/api/v1/subscriptions")
       .then(response => {
         console.log("Received response:", response);
+        if (!response.ok) {
+          throw new Error(response.status); 
+        }  
         return response.json();
       })
       .then(data => {
@@ -32,7 +35,9 @@ function App() {
   return (
     <section>
       <header>
-        <img className='logo' src={teaTrade} alt='Tea Trade Logo' onClick={() => {navigate(`/`)}}/>
+        <button onClick={() => {navigate(`/`)}} style={{ border: 'none', background: 'none', padding: 0 }}>
+          <img className='logo' src={teaTrade} alt='Tea Trade Logo' />
+        </button>        
         <h1>T-Trade</h1>
       </header>
       <Routes>

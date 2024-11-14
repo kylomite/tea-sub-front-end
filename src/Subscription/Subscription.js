@@ -14,6 +14,9 @@ function Subscription() {
     fetch(`http://127.0.0.1:3000/api/v1/subscriptions/${id}`)
       .then(response => {
         console.log("Received response:", response);
+        if (!response.ok) {
+          throw new Error(response.status); 
+        }  
         return response.json();
       })
       .then(data => {
@@ -35,7 +38,13 @@ function Subscription() {
         toggle_active: true,
       }),
     })
-      .then(response => response.json())
+      .then(response => {
+        console.log("Received response:", response);
+        if (!response.ok) {
+          throw new Error(response.status); 
+        }  
+        return response.json()
+      })
       .then(data => {
         console.log('Subscription updated:', data);
         setSpecificSubscription(data.data);
