@@ -6,7 +6,7 @@
 
 .overview-title {
   background-color: white;
-  color: rgb(114, 117, 112);
+  color: rgb(82, 84, 80);
   font-size: 2vw;
   margin: 2vw 4vw; 
 }
@@ -24,7 +24,7 @@
 
 .search-bar label {
   background-color:rgb(184, 189, 181);
-  color: rgb(114, 117, 112);
+  color: rgb(49, 50, 47);
   margin-right: 8px;
   font-size: 1.8vw;
 }
