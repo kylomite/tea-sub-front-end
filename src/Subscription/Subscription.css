@@ -1,0 +1,77 @@
+.specific-subscription-container {
+  background-color: white;
+  margin: 1vw;
+  border-radius: 5vw;
+}
+
+.header-container {
+  display: flex;
+  justify-content :space-between;
+  align-items: center;
+  background-color: white;
+  
+  border-radius: 5vw;
+}
+
+.header-sub {
+color: rgb(114, 117, 112);
+text-shadow: none;
+margin: 0vw 2vw;
+}
+
+.active-sub {
+  background-color: rgb(184, 189, 181);
+  cursor: pointer;
+  border-style: none;
+  padding: 3vw 5vw 3vw;
+  margin: 2vw 0vw;
+  border-radius: 4vw 0vw 0vw 4vw;
+  font-size: 2vw;
+  transition: box-shadow 0.2s ease-out;
+}
+
+.active-sub:hover {
+  box-shadow: -10px 0 0px rgba(114, 117, 112, 1);
+}
+
+.subscription-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tea-info, .customer-info{
+  background-color: white;
+  flex: 1;
+  padding: 2vw;
+}
+
+.tea-info{
+  text-align: center;
+  border-radius: 0 0 0 5vw;
+}
+
+.title-sub {
+background-color: white;
+color: rgb(114, 117, 112);
+}
+
+.image-sub{
+  width: 35vw;
+}
+
+.customer-info{
+  display: flex;
+  flex-direction: column;
+  padding: 10vw 0;
+  text-align: center;
+  border-radius: 0 0 5vw 0;
+}
+
+.name-sub {
+background-color: white;
+color: rgb(114, 117, 112);
+}
+
+.image-sub{
+  width: 35vw;
+}

@@ -50,32 +50,38 @@ function Subscription() {
   }
   return (
     <main className='specific-subscription-container'>
-      <h1>{specificSubscription.attributes.customer.attributes.first_name}'s order</h1>
-      <button onClick={updateSubscription}>
-        {specificSubscription.attributes.active ? 'Deactivate' : 'Activate'}
-      </button>
-      <section className='tea-info'>
-        <h2>{specificSubscription.attributes.tea.attributes.title}</h2>
-        <img src={specificSubscription.attributes.tea.attributes.image} alt='Image of Tea'/>
-        <p>${specificSubscription.attributes.tea.attributes.price}</p>
-        <p>{specificSubscription.attributes.tea.attributes.description}</p>
-        <p>Temperature: {specificSubscription.attributes.tea.attributes.temp} F</p>
-        <p>Brew time: {specificSubscription.attributes.tea.attributes.brew_time} Minutes</p>
+      <section className='header-container'>
+        <h1 className='header-sub'>{specificSubscription.attributes.customer.attributes.first_name}'s Subscription</h1>
+        <button className='active-sub'onClick={updateSubscription}>
+          {specificSubscription.attributes.active ? 'Deactivate' : 'Activate'}
+        </button>
       </section>
-      
-      <section className='customer-info'>
-        <h2>
-          {specificSubscription.attributes.customer.attributes.first_name}{" "}   
-          {specificSubscription.attributes.customer.attributes.last_name} 
-        </h2>
-        <p>{specificSubscription.attributes.customer.attributes.email}</p>
-        <p>
-          {specificSubscription.attributes.customer.attributes.street_address}{", "}
-          {specificSubscription.attributes.customer.attributes.city}{", "}
-          <br/>
-          {specificSubscription.attributes.customer.attributes.state}{", "}
-          {specificSubscription.attributes.customer.attributes.zip}
-        </p>
+      <section className='subscription-details'>
+        <section className='tea-info'>
+          <h2 className='title-sub'>{specificSubscription.attributes.tea.attributes.title}</h2>
+          <img className='image-sub' src={specificSubscription.attributes.tea.attributes.image} alt='Image of Tea'/>
+          <p className='price-sub'>Price: ${specificSubscription.attributes.tea.attributes.price}</p>
+          <p className='description-sub'>{specificSubscription.attributes.tea.attributes.description}</p>
+          <p className='temp-sub'>Temperature: {specificSubscription.attributes.tea.attributes.temp} F</p>
+          <p className='brew-time-sub'>Brew time: {specificSubscription.attributes.tea.attributes.brew_time} Minutes</p>
+        </section>
+        
+        <section className='customer-info'>
+          <h2 className='name-sub'>
+            Customer: {specificSubscription.attributes.customer.attributes.first_name}{" "}   
+            {specificSubscription.attributes.customer.attributes.last_name} 
+          </h2>
+          <p className='email-sub'>Email: {specificSubscription.attributes.customer.attributes.email}</p>
+          <p className='address-sub'>
+            Address: 
+            <br/>
+            {specificSubscription.attributes.customer.attributes.street_address}{", "}
+            {specificSubscription.attributes.customer.attributes.city}{", "}
+            <br/>
+            {specificSubscription.attributes.customer.attributes.state}{", "}
+            {specificSubscription.attributes.customer.attributes.zip}
+          </p>
+        </section>
       </section>
     </main>
   )
